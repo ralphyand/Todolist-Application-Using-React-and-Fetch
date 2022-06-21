@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+h1{
+
+  color: #cbcbcb;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px 0;
+
+
+}
+html,
+body{
+
+  color: azure;
+  background-color: #1b1b32;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 40px;
+}
+
+.aplicacion-tareas{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+}  
+
+
+.tarea-lista-principal{
+
+  width:  600px;
+  min-height: 500px;
+  background-color: rgb(77, 75, 75);
+  padding: 25px;
+  margin: 10px;
+  border-radius: 26px;
+
+
+}
+
