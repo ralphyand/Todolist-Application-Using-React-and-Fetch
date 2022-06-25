@@ -51,7 +51,7 @@ function ListaDeTareas() {
           }
         </div>
 <div className="footer">
-<h1>{tareas.length} Tus Tareas pendientes</h1>
+<h1> Tienes {tareas.length} Tareas Pendientes</h1>
 
 
 </div>
