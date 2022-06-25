@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import Tarea from "./tarea";
 import TareaFormulario from "./tareaformulario"
 import '../hojas-de-estilo/listadetareas.css';
@@ -8,6 +8,15 @@ import '../hojas-de-estilo/listadetareas.css';
 function ListaDeTareas() {
 
     const [tareas, setTareas] = useState([]);
+      //aqui llamamos a la api
+    useEffect (()=>{
+      fetch('https://assets.breatheco.de/apis/fake/todos/user/alesanchezr')
+      .then(response => response.json())
+      .then(response => setTareas(response))
+
+
+    }, [])
+
   
     const agregarTarea = tarea => {
       if (tarea.texto.trim()) {
@@ -34,18 +43,22 @@ function ListaDeTareas() {
     
     return (
       <>
+
+
+      
         <TareaFormulario onSubmit={agregarTarea} />
         <div className='tareas-lista-contenedor'>
           {
-            tareas.map((tarea) =>
+            tareas.map((value, index , tarea) =>
               <Tarea
-                key={tarea.id}
+                key={tarea.id, index}
+              
                 id={tarea.id} 
-                texto={tarea.texto}
+                texto={tarea.texto, value.label}
                 completada={tarea.completada}
                 completarTarea={completarTarea}
                 eliminarTarea={eliminarTarea} />
-  
+   
             
             ) 
           }
