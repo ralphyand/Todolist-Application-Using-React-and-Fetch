@@ -9,10 +9,13 @@ function App() {
     <div className="aplicacion-tareas">
      <div className='tarea-lista-principal'>
         <h1> Mis Tareas</h1>
+        
     <ListaDetareas/>
      </div>
 
     </div>
+  
+  
   );
 }
 

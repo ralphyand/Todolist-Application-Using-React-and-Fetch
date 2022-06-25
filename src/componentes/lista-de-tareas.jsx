@@ -45,9 +45,19 @@ function ListaDeTareas() {
                 completada={tarea.completada}
                 completarTarea={completarTarea}
                 eliminarTarea={eliminarTarea} />
+  
+            
             ) 
           }
         </div>
+<div className="footer">
+<h1>{tareas.length} Tus Tareas pendientes</h1>
+
+
+</div>
+
+
+
       </>
     );    
   }
